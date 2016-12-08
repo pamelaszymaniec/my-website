@@ -1,0 +1,26 @@
+@mixin device($media) {
+  @if $media == xs {
+    @media only screen and (max-width: 767px) { @content; }
+  }
+  @else if $media == sm {
+    @media only screen and (min-width: 768px) and (max-width: 991px) { @content; }
+  }
+  @else if $media == md {
+    @media only screen and (min-width: 992px) and (max-width: 1199px) { @content; }
+  }
+  @else if $media == lg {
+    @media only screen and (min-width: 1200px) { @content; }
+  }
+  @else if $media == sm-down {
+    @media only screen and (max-width: 991px) { @content; }
+  }
+  @else if $media == md-down {
+    @media only screen and (max-width: 1199px) { @content; }
+  }
+  @else if $media == sm-up {
+    @media only screen and (min-width: 768px) { @content; }
+  }
+  @else if $media == md-up {
+    @media only screen and (min-width: 992px) { @content; }
+  }
+}

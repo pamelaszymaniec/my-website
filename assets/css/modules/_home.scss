@@ -1,0 +1,164 @@
+.hero-wrap {
+  padding-top: 120px;
+  //padding-bottom: 120px;
+  position: relative;
+  text-align: center;
+  background: url("../img/developer-tree-on-webSVGsmall.svg") no-repeat center 100px ;
+  background-size: 100vh;
+
+  height: 100vh;
+  @include device(sm-down) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @include device(md-up){
+    padding-top: 110px;
+    //padding-bottom: 150px;
+  }
+
+  .gradient {
+
+    display: block;
+    width: 100%;
+    height: 130vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    //-webkit-transform: skewY(-15deg);
+    //-moz-transform: skewY(-15deg);
+    //-ms-transform: skewY(-15deg);
+    //-o-transform: skewY(-15deg);
+    //transform: skewY(15deg);
+    -webkit-transform-origin: 100%;
+    transform-origin:100%;
+    background: $heroColor;
+
+    z-index: -1;
+    //#9966CC
+    //background: -webkit-linear-gradient(-170deg, #FFD2D2 60%, #F5FBC6 100%);
+    //background: linear-gradient(-170deg, #FFD2D2 60%, #F5FBC6 100%);
+  }
+
+
+
+}
+
+.box {
+  padding: 60px;
+  //background: #FFFFFF;
+}
+
+.about-wrap {
+  position: relative;
+  overflow: hidden;
+  z-index: 9;
+  &:before {
+    content: " ";
+    position: absolute;
+    top: -3px;
+    left: 50%;
+    width: 190vw;
+    height: 190vw;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+
+    //-webkit-transform: translateY(-50%);
+    //-moz-transform: translateY(-50%);
+    //-ms-transform: translateY(-50%);
+    //-o-transform: translateY(-50%);
+    //transform: translateY(-50%);
+    border-radius: 100%;
+    display: block;
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e1bbdf+0,688ee6+100 */
+    background: #FFFFFF; /* Old browsers */
+    //background: -moz-linear-gradient(top, #e1bbdf 0%, #688ee6 100%); /* FF3.6-15 */
+    //background: -webkit-linear-gradient(top, #e1bbdf 0%, #688ee6 100%); /* Chrome10-25,Safari5.1-6 */
+    //background: linear-gradient(to bottom, #e1bbdf 0%, #688ee6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    //filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e1bbdf', endColorstr='#688ee6', GradientType=0); /* IE6-9 */
+
+    @include device(sm-down) {
+      border-radius: 0;
+      height: 100%;
+      width: 100%;
+      padding: 5px;
+    }
+
+  }
+  .box {
+    //-webkit-transform: translateY(-50%);
+    //-moz-transform: translateY(-50%);
+    //-ms-transform: translateY(-50%);
+    //-o-transform: translateY(-50%);
+    //transform: translateY(-50%);
+    //border-radius: 100%;
+  }
+  @include device(sm-down) {
+    //margin-top: -300px;
+  }
+  h2 {
+    //font-size: 30px;
+  }
+  h1 {
+    position: absolute;
+    right: 2%;
+    top: -20%;
+  }
+  .box {
+    @include device(sm-down) {
+      margin-bottom: 40px;
+      padding: 10px;
+    }
+  }
+}
+
+.process-wrap {
+  position: relative;
+  //overflow: hidden;
+  padding-bottom: 100px;
+  background: #e1bbdf;
+
+  &:before {
+    content: " ";
+    //position: absolute;
+    //top: 0;
+    //left: 50%;
+    //width: 190vw;
+    //height: 190vw;
+    //-webkit-transform: translateX(-50%);
+    //-moz-transform: translateX(-50%);
+    //-ms-transform: translateX(-50%);
+    //-o-transform: translateX(-50%);
+    //transform: translateX(-50%);
+    //border-radius: 100%;
+    //display: block;
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e1bbdf+0,688ee6+100 */
+    background: #e1bbdf; /* Old browsers */
+    background: -moz-linear-gradient(top, #e1bbdf 0%, #688ee6 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #e1bbdf 0%, #688ee6 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #e1bbdf 0%, #688ee6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e1bbdf', endColorstr='#688ee6', GradientType=0); /* IE6-9 */
+
+    @include device(sm-down) {
+      border-radius: 0;
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .stripe {
+      top: 4px;
+      left: 10px;
+      //content: '';
+      width: 44px;
+      height: 4px;
+      opacity: .3;
+      position: absolute;
+      background-color: #787f8c
+  }
+}
+
