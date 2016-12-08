@@ -65,41 +65,6 @@ h2 {
 
 a {
   text-decoration: none !important; }
-  a.btn {
-    background: #f6a8a8;
-    /* Old browsers */
-    background: -moz-linear-gradient(left, #f6a8a8 0%, #e96fa2 100%) !important;
-    /* FF3.6-15 */
-    background: -webkit-linear-gradient(left, #f6a8a8 0%, #e96fa2 100%) !important;
-    /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right, #f6a8a8 0%, #e96fa2 100%) !important;
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6a8a8', endColorstr='#e96fa2', GradientType=1) !important;
-    /* IE6-9 */
-    position: relative;
-    padding: 12px 20px;
-    color: #fff !important;
-    font-family: "Muli", sans-serif;
-    letter-spacing: 1px;
-    font-size: 18px;
-    box-shadow: 0 0 0px 0px rgba(152, 123, 123, 0); }
-    a.btn:hover {
-      -webkit-transform: scale(1.05);
-      -moz-transform: scale(1.05);
-      -ms-transform: scale(1.05);
-      -o-transform: scale(1.05);
-      transform: scale(1.05); }
-  a.btn-larger {
-    font-size: 25px;
-    padding: 12px 30px; }
-  a.full {
-    width: 100%; }
-
-p {
-  margin-bottom: 25px; }
-
-.mb-0 {
-  margin-bottom: 0 !important; }
 
 .header {
   position: fixed;
@@ -133,13 +98,11 @@ p {
       .header .row {
         padding-top: 10px;
         padding-bottom: 10px; } }
-  .header .logo {
-    letter-spacing: 1px; }
-    @media only screen and (max-width: 991px) {
-      .header .logo {
-        text-align: center;
-        display: block;
-        font-size: 36px; } }
+  @media only screen and (max-width: 991px) {
+    .header .logo {
+      text-align: center;
+      display: block;
+      font-size: 36px; } }
   .header nav {
     text-align: right;
     margin-top: 20px; }
@@ -152,16 +115,10 @@ p {
       color: white;
       text-transform: uppercase;
       font-family: "Muli", sans-serif;
-      letter-spacing: 1px;
+      font-weight: bold;
+      letter-spacing: 2px;
       display: block;
       padding: 10px; }
-
-footer {
-  margin: 0 auto;
-  text-align: center; }
-  footer p {
-    padding-top: 10px;
-    font-size: 14px; }
 
 .hero-wrap {
   padding-top: 120px;
@@ -186,8 +143,16 @@ footer {
     right: 0;
     -webkit-transform-origin: 100%;
     transform-origin: 100%;
-    background: #9966CC;
-    z-index: -1; }
+    z-index: -1;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e1bbdf+0,9966cc+0&1+0,0+100 */
+    background: -moz-linear-gradient(top, #9966cc 0%, rgba(153, 102, 204, 0) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #9966cc 0%, rgba(153, 102, 204, 0) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #9966cc 0%, rgba(153, 102, 204, 0) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9966cc', endColorstr='#009966cc',GradientType=0 );
+    /* IE6-9 */ }
 
 .box {
   padding: 60px; }
@@ -227,12 +192,16 @@ footer {
     .about-wrap .box {
       margin-bottom: 40px;
       padding: 10px; } }
+  .about-wrap img {
+    width: 15%;
+    margin: 20px;
+    border: 5px solid #393185; }
 
-.process-wrap {
+.skills-wrap {
   position: relative;
   padding-bottom: 100px;
   background: #e1bbdf; }
-  .process-wrap:before {
+  .skills-wrap:before {
     content: " ";
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e1bbdf+0,688ee6+100 */
     background: #e1bbdf;
@@ -246,17 +215,39 @@ footer {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e1bbdf', endColorstr='#688ee6', GradientType=0);
     /* IE6-9 */ }
     @media only screen and (max-width: 991px) {
-      .process-wrap:before {
+      .skills-wrap:before {
         border-radius: 0;
         height: 100%;
         width: 100%; } }
-  .process-wrap .stripe {
+  .skills-wrap .stripe {
     top: 4px;
     left: 10px;
     width: 44px;
     height: 4px;
     opacity: .3;
     position: absolute;
-    background-color: #787f8c; }
+    background-color: #9966CC; }
+
+.portfolio-wrap {
+  position: relative;
+  padding-bottom: 100px;
+  background: whitesmoke;
+  text-align: center; }
+  .portfolio-wrap:before {
+    content: " ";
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e1bbdf+0,688ee6+100 */ }
+    @media only screen and (max-width: 991px) {
+      .portfolio-wrap:before {
+        border-radius: 0;
+        height: 100%;
+        width: 100%; } }
+  .portfolio-wrap .stripe {
+    top: 4px;
+    left: 10px;
+    width: 44px;
+    height: 4px;
+    opacity: .3;
+    position: absolute;
+    background-color: #9966CC; }
 
 /*# sourceMappingURL=style.css.map */

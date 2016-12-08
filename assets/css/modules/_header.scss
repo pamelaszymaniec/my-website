@@ -39,16 +39,10 @@
     }
   }
   .logo {
-    //font-family: $headType;
-    //text-decoration: none !important;
-    //font-size: 48px;
-    //color: #e59492;
-    letter-spacing: 1px;
     @include device(sm-down){
       text-align: center;
       display: block;
       font-size: 36px;
-
     }
   }
   nav {
@@ -64,8 +58,9 @@
       font-size: 14px;
       color: $headColor;
       text-transform: uppercase;
-      font-family: $headTypeLight;
-      letter-spacing: 1px;
+      font-family: $header;
+      font-weight: bold;
+      letter-spacing: 2px;
       display: block;
       padding: 10px;
     }
