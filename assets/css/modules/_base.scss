@@ -24,12 +24,8 @@ body {
   }
 }
 
-h1, h2, h3, h4, h5 {
-  margin-top: 0;
-
-  //letter-spacing: -0.6px;
-  line-height: 1.3;
-  margin-bottom: 20px;
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
 }
 
 h2 {
@@ -39,11 +35,13 @@ h2 {
   color: #393185;
   font-family: $headings;
   font-weight: 700;
+  padding: 40px 0;
+  text-align: center;
 }
 
 h4 {
   letter-spacing: 2px;
-  color: #393185;
+  color: $headers;
   text-align: left;
   margin-bottom: 5px;
   font-weight: 700;
@@ -67,6 +65,16 @@ a {
 }
 
 p {
-  line-height: 1;
+  line-height: 1.1;
   text-align: justify;
 }
+
+.stripe {
+  top: 4px;
+  left: 10px;
+  width: 55px;
+  height: 5px;
+  background-color: $stripes;
+  margin-bottom: 5px;
+}
+

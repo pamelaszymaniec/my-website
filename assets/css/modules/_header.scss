@@ -6,63 +6,68 @@
   width: 100%;
   z-index: 10;
   background: rgba(255, 255, 255, 0);
-  box-shadow: 0 0 66px 4px rgba(152,123,123,0);
-  .logo img {
-    width: 250px;
-  }
-  @include device(sm-down){
-    position: absolute;
+  box-shadow: 0 0 66px 4px rgba(152, 123, 123, 0);
+  @include device(sm-down) {
+    position: fixed;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 0 66px 4px rgba(152, 123, 123, 0.18);
   }
   &.scrolled {
-    background: #e1bbdf; /* Old browsers */
+    background: $headers;
     box-shadow: 0 0 66px 4px rgba(152, 123, 123, 0.18);
     .row {
-      padding-top: 5px;
+      padding-top: 10px;
       padding-bottom: 10px;
     }
-    nav {
-      margin-top: 2px;
-    }
-    .logo img{
-      font-size: 28px;
-      width: 200px;
+    .logo img {
+      max-width: 200px;
       position: absolute;
     }
   }
   .row {
     @extend .transition;
-    padding-top: 30px;
-    //padding-bottom: 60px;
-    @include device(sm-down){
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @include device(sm-down) {
       padding-top: 10px;
       padding-bottom: 10px;
+      .logo img {
+        max-width: 200px;
+      }
+      li {
+        display: none;
+      }
+      .menu-trigger {
+        display: inline-block;
+      }
+    }
+    @include device(md-up) {
+      .menu-trigger {
+        display: none;
+      }
     }
   }
-  .logo {
-    @include device(sm-down){
-      text-align: center;
-      display: block;
-      font-size: 36px;
-    }
+  .logo img {
+    max-width: 260px;
   }
   nav {
     text-align: right;
-    margin-top: 20px;
-    ul {
-      margin: 0;
-    }
     li {
       display: inline-block;
     }
     a {
-      font-size: 14px;
-      color: $headColor;
+      font-size: 18px;
+      color: white;
       text-transform: uppercase;
       font-family: $header;
-      font-weight: bold;
-      letter-spacing: 2px;
+      letter-spacing: 1px;
       display: block;
-      padding: 10px;
+      padding: 10px 0px 10px 20px;
     }
   }
+}
+
+#menu.active li {
+  display: block;
+  margin-left: 18px;
 }

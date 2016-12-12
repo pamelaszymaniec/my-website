@@ -43,10 +43,8 @@ body {
       padding-top: 60px;
       padding-bottom: 60px; } }
 
-h1, h2, h3, h4, h5 {
-  margin-top: 0;
-  line-height: 1.3;
-  margin-bottom: 20px; }
+h1, h2, h3, h4, h5, h6 {
+  margin: 0; }
 
 h2 {
   font-size: 20px;
@@ -54,11 +52,13 @@ h2 {
   text-transform: uppercase;
   color: #393185;
   font-family: "Muli", sans-serif;
-  font-weight: 700; }
+  font-weight: 700;
+  padding: 40px 0;
+  text-align: center; }
 
 h4 {
   letter-spacing: 2px;
-  color: #393185;
+  color: #1C4465;
   text-align: left;
   margin-bottom: 5px;
   font-weight: 700; }
@@ -76,8 +76,16 @@ a {
     cursor: pointer; }
 
 p {
-  line-height: 1;
+  line-height: 1.1;
   text-align: justify; }
+
+.stripe {
+  top: 4px;
+  left: 10px;
+  width: 55px;
+  height: 5px;
+  background-color: #54A6C3;
+  margin-bottom: 5px; }
 
 .header {
   position: fixed;
@@ -87,70 +95,82 @@ p {
   z-index: 10;
   background: rgba(255, 255, 255, 0);
   box-shadow: 0 0 66px 4px rgba(152, 123, 123, 0); }
-  .header .logo img {
-    width: 250px; }
   @media only screen and (max-width: 991px) {
     .header {
-      position: absolute; } }
+      position: fixed;
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 0 66px 4px rgba(152, 123, 123, 0.18); } }
   .header.scrolled {
-    background: #e1bbdf;
-    /* Old browsers */
+    background: #1C4465;
     box-shadow: 0 0 66px 4px rgba(152, 123, 123, 0.18); }
     .header.scrolled .row {
-      padding-top: 5px;
+      padding-top: 10px;
       padding-bottom: 10px; }
-    .header.scrolled nav {
-      margin-top: 2px; }
     .header.scrolled .logo img {
-      font-size: 28px;
-      width: 200px;
+      max-width: 200px;
       position: absolute; }
   .header .row {
-    padding-top: 30px; }
+    padding-top: 60px;
+    padding-bottom: 60px; }
     @media only screen and (max-width: 991px) {
       .header .row {
         padding-top: 10px;
-        padding-bottom: 10px; } }
-  @media only screen and (max-width: 991px) {
-    .header .logo {
-      text-align: center;
-      display: block;
-      font-size: 36px; } }
+        padding-bottom: 10px; }
+        .header .row .logo img {
+          max-width: 200px; }
+        .header .row li {
+          display: none; }
+        .header .row .menu-trigger {
+          display: inline-block; } }
+    @media only screen and (min-width: 992px) {
+      .header .row .menu-trigger {
+        display: none; } }
+  .header .logo img {
+    max-width: 260px; }
   .header nav {
-    text-align: right;
-    margin-top: 20px; }
-    .header nav ul {
-      margin: 0; }
+    text-align: right; }
     .header nav li {
       display: inline-block; }
     .header nav a {
-      font-size: 14px;
+      font-size: 18px;
       color: white;
       text-transform: uppercase;
       font-family: "Muli", sans-serif;
-      font-weight: bold;
-      letter-spacing: 2px;
+      letter-spacing: 1px;
       display: block;
-      padding: 10px; }
+      padding: 10px 0px 10px 20px; }
+
+#menu.active li {
+  display: block;
+  margin-left: 18px; }
+
+footer {
+  background: #e1bbdf; }
 
 .hero-wrap {
   padding-top: 120px;
   position: relative;
   text-align: center;
-  background: url("../img/developer-tree-on-webSVGsmall.svg") no-repeat center 100px;
+  background: url("../img/developer-tree-on-webSVGsmall.svg") no-repeat center 90px;
   background-size: 100vh;
   height: 100vh; }
   @media only screen and (max-width: 991px) {
     .hero-wrap {
       padding-top: 60px;
       padding-bottom: 60px; } }
-  @media only screen and (min-width: 992px) {
+  @media only screen and (max-width: 991px) {
     .hero-wrap {
-      padding-top: 110px; } }
+      padding-top: 60px;
+      padding-bottom: 60px; } }
+  @media only screen and (max-width: 767px) {
+    .hero-wrap {
+      background: url("../img/developer-tree-on-webSVGsmall.svg") no-repeat center bottom;
+      background-size: 50vh;
+      height: 70vh; } }
   .hero-wrap .gradient {
     display: block;
     width: 100%;
-    height: 130vh;
+    height: 140vh;
     position: absolute;
     top: 0;
     right: 0;
@@ -167,14 +187,16 @@ p {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#9966cc', endColorstr='#009966cc', GradientType=0);
     /* IE6-9 */ }
   .hero-wrap .bubbles {
-    width: 30%;
+    width: 50%;
     position: absolute;
-    bottom: -400px;
+    bottom: -300px;
+    overflow: hidden;
     left: 0; }
   .hero-wrap .flippedbubbles {
-    width: 30%;
+    width: 50%;
     right: 0;
-    bottom: -400px;
+    overflow: hidden;
+    bottom: -300px;
     position: absolute;
     -moz-transform: scaleX(-1);
     -o-transform: scaleX(-1);
@@ -183,20 +205,16 @@ p {
     filter: FlipH;
     -ms-filter: "FlipH"; }
 
-.box {
-  padding: 60px; }
-
 .about-wrap {
   position: relative;
-  overflow: hidden;
-  z-index: 9; }
+  overflow: hidden; }
   .about-wrap:before {
     content: " ";
     position: absolute;
-    top: -3px;
+    top: -10px;
     left: 50%;
-    width: 190vw;
-    height: 190vw;
+    width: 150vw;
+    height: 150vw;
     -webkit-transform: translateX(-50%);
     -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
@@ -213,88 +231,120 @@ p {
         height: 100%;
         width: 100%;
         padding: 5px; } }
-  .about-wrap h1 {
-    position: absolute;
-    right: 2%;
-    top: -20%; }
-  @media only screen and (max-width: 991px) {
-    .about-wrap .box {
-      margin-bottom: 40px;
-      padding: 10px; } }
-  .about-wrap .clearfix {
-    position: relative; }
-  .about-wrap img {
-    display: none; }
-  .about-wrap .stripe {
-    top: 4px;
-    left: 10px;
-    width: 55px;
-    height: 5px;
-    background-color: #9966CC;
-    margin-bottom: 5px; }
   .about-wrap .picture-about {
     height: 400px;
+    border: 30px solid white;
+    border-radius: 50% 0;
     background: url("../img/Pamela2.jpg") no-repeat center center;
     background-size: contain; }
     @media only screen and (max-width: 767px) {
       .about-wrap .picture-about {
-        margin: 20px;
-        height: 200px; } }
-  .about-wrap .text-about {
-    top: 50%;
-    left: 0; }
+        margin-bottom: 20px;
+        height: 200px;
+        border: 10px; } }
 
 .skills-wrap {
   position: relative;
-  padding-bottom: 100px;
-  background: #e1bbdf; }
+  overflow: hidden; }
   .skills-wrap:before {
     content: " ";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100vw;
+    height: 100vw;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-103%);
+    border-radius: 15%;
+    display: block;
+    -webkit-transform-origin: 0;
+    transform-origin: 0;
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e1bbdf+0,688ee6+100 */
     background: #e1bbdf;
-    /* Old browsers */
-    background: -moz-linear-gradient(top, #e1bbdf 0%, #688ee6 100%);
-    /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, #e1bbdf 0%, #688ee6 100%);
-    /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, #e1bbdf 0%, #688ee6 100%);
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e1bbdf', endColorstr='#688ee6', GradientType=0);
-    /* IE6-9 */ }
+    /* Old browsers */ }
     @media only screen and (max-width: 991px) {
       .skills-wrap:before {
         border-radius: 0;
         height: 100%;
-        width: 100%; } }
-  .skills-wrap .stripe {
-    top: 4px;
-    left: 10px;
-    width: 44px;
-    height: 4px;
-    opacity: .3;
-    position: absolute;
-    background-color: #9966CC; }
+        width: 100%;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%); } }
+  .skills-wrap .skills-description h2 {
+    text-align: left; }
+  .skills-wrap .tech-icons {
+    color: #1C4465;
+    text-align: center; }
+    @media only screen and (min-width: 768px) {
+      .skills-wrap .tech-icons {
+        text-align: right; }
+        .skills-wrap .tech-icons h2 {
+          text-align: right; } }
+    .skills-wrap .tech-icons div {
+      padding: 5px; }
+    .skills-wrap .tech-icons img {
+      margin: 0 auto;
+      background: #1C4465;
+      display: block;
+      border-radius: 30% 0;
+      box-shadow: 0 0 55px 5px rgba(25, 68, 101, 0.05); }
+      @media only screen and (min-width: 768px) {
+        .skills-wrap .tech-icons img {
+          margin: 0 0 0 auto; } }
+    .skills-wrap .tech-icons .tech-item:hover {
+      opacity: 0.9;
+      cursor: pointer; }
+      .skills-wrap .tech-icons .tech-item:hover b {
+        display: none; }
+      .skills-wrap .tech-icons .tech-item:hover .progress-item {
+        margin: 3px 0.5px;
+        display: inline-block;
+        width: 5px;
+        height: 5px;
+        border: 1px solid #1C4465;
+        border-radius: 20% 0; }
+      .skills-wrap .tech-icons .tech-item:hover .fullfilled {
+        background: #1C4465; }
 
 .portfolio-wrap {
   position: relative;
+  overflow: hidden;
   padding-bottom: 100px;
-  background: whitesmoke;
+  background: #e1bbdf;
+  /* Old browsers */
   text-align: center; }
   .portfolio-wrap:before {
     content: " ";
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e1bbdf+0,688ee6+100 */ }
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 100vw;
+    height: 100vw;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-3%);
+    border-radius: 0 15%;
+    display: block;
+    -webkit-transform-origin: 0;
+    transform-origin: 0;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e1bbdf+0,688ee6+100 */
+    background: white; }
     @media only screen and (max-width: 991px) {
       .portfolio-wrap:before {
         border-radius: 0;
         height: 100%;
-        width: 100%; } }
-  .portfolio-wrap .stripe {
-    top: 4px;
-    left: 10px;
-    width: 44px;
-    height: 4px;
-    opacity: .3;
-    position: absolute;
-    background-color: #9966CC; }
+        width: 100%;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%); } }
 
 /*# sourceMappingURL=style.css.map */

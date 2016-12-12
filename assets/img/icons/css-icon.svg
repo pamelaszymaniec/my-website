@@ -1,32 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <!-- Creator: CorelDRAW X7 -->
-<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="71px" height="71px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-viewBox="0 0 71 71"
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="47px" height="47px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 47 47"
  xmlns:xlink="http://www.w3.org/1999/xlink">
  <defs>
   <style type="text/css">
    <![CDATA[
-    .fil3 {fill:black}
-    .fil0 {fill:#264DE4}
-    .fil1 {fill:#2965F1}
-    .fil2 {fill:#EBEBEB}
-    .fil4 {fill:white}
+    .fil1 {fill:#FEFEFE}
+    .fil0 {fill:none}
    ]]>
   </style>
  </defs>
  <g id="Layer_x0020_1">
   <metadata id="CorelCorpID_0Corel-Layer"/>
-  <g id="g3013">
-   <polygon id="polygon2989" class="fil0" points="35,59 21,56 18,22 51,22 48,56 "/>
-   <polygon id="polygon2991" class="fil1" points="46,53 48,24 35,24 35,57 "/>
-   <polygon id="polygon2993" class="fil2" points="25,37 26,41 35,41 35,37 "/>
-   <polygon id="polygon2995" class="fil2" points="24,29 25,33 35,33 35,29 35,29 "/>
-   <polygon id="polygon2997" class="fil2" points="35,48 35,48 30,47 30,43 28,43 26,43 26,50 35,52 35,52 "/>
-   <polygon id="path2999" class="fil3" points="26,12 31,12 31,15 28,15 28,17 31,17 31,19 26,19 "/>
-   <polygon id="path3001" class="fil3" points="32,12 37,12 37,14 34,14 34,15 37,15 37,19 32,19 32,17 35,17 35,17 32,17 "/>
-   <polygon id="path3003" class="fil3" points="38,12 43,12 43,14 40,14 40,15 43,15 43,19 38,19 38,17 41,17 41,17 38,17 "/>
-   <polygon id="polygon3005" class="fil4" points="45,37 45,29 35,29 35,33 41,33 40,37 35,37 35,41 40,41 39,47 35,48 35,52 43,50 43,49 44,38 "/>
-  </g>
+  <path class="fil0" d="M14 0l33 0 0 33c0,8 -6,14 -14,14l-33 0 0 -33c0,-8 6,-14 14,-14z"/>
+  <path class="fil1" d="M34 11l-21 0c0,0 -1,0 -1,1l2 21c0,0 1,1 1,1l8 2c0,0 1,0 1,0l8 -2c0,0 1,-1 1,-1l2 -21c0,-1 -1,-1 -1,-1zm-4 7c0,0 0,0 0,0 0,0 0,0 0,0l-6 3c0,0 0,0 0,0 0,0 0,0 1,0l4 0c0,0 1,0 1,0 0,1 0,1 0,1l-1 7c0,0 0,0 0,0l-5 2c0,0 -1,0 -1,0l-5 -2c0,0 0,0 0,0l0 -3c0,0 0,-1 0,-1 0,0 0,0 0,0l1 0c1,0 1,0 1,1l0 1 4 2 3 -2 0 -3 -9 0c0,0 -1,-1 -1,-1l0 -2c0,0 0,0 0,0l6 -3c1,0 1,0 1,0 0,0 -1,0 -1,0l-6 0c0,0 0,0 0,0l0 -2c0,0 0,0 0,0 0,0 0,0 0,0l13 0c0,0 0,0 0,0 1,0 1,0 1,0l-1 2z"/>
  </g>
 </svg>
