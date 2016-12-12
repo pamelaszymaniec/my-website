@@ -22,7 +22,7 @@ $(document).ready(function () {
     function parallax(){
         var scrolled = $(window).scrollTop();
         $('.has-parallax').css(
-            'top', (scrolled*0.3)+'px'
+            'bottom', (scrolled*0.3)+ (-400) + 'px'
         );
     }
 

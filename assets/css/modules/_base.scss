@@ -1,6 +1,6 @@
 body {
   font-family: $headings;
-  font-size: 17px;
+  font-size: 16px;
   line-height: 1.9;
   color: #2c2c2c;
   letter-spacing: 0.3px;
@@ -41,6 +41,14 @@ h2 {
   font-weight: 700;
 }
 
+h4 {
+  letter-spacing: 2px;
+  color: #393185;
+  text-align: left;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
 .transition {
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
@@ -52,4 +60,13 @@ h2 {
 a {
   @extend .transition;
   text-decoration: none !important;
+  &:hover {
+    cursor: pointer;
+  }
+
+}
+
+p {
+  line-height: 1;
+  text-align: justify;
 }

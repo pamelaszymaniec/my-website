@@ -3,7 +3,7 @@
   //padding-bottom: 120px;
   position: relative;
   text-align: center;
-  background: url("../img/developer-tree-on-webSVGsmall.svg") no-repeat center 100px ;
+  background: url("../img/developer-tree-on-webSVGsmall.svg") no-repeat center 100px;
   background-size: 100vh;
 
   height: 100vh;
@@ -12,7 +12,7 @@
     padding-bottom: 60px;
   }
 
-  @include device(md-up){
+  @include device(md-up) {
     padding-top: 110px;
     //padding-bottom: 150px;
   }
@@ -25,26 +25,45 @@
     top: 0;
     right: 0;
     -webkit-transform-origin: 100%;
-    transform-origin:100%;
+    transform-origin: 100%;
     //background: $heroColor;
     z-index: -1;
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e1bbdf+0,9966cc+0&1+0,0+100 */
-    background: -moz-linear-gradient(top,  rgba(153,102,204,1) 0%, rgba(153,102,204,0) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top,  rgba(153,102,204,1) 0%,rgba(153,102,204,0) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom,  rgba(153,102,204,1) 0%,rgba(153,102,204,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9966cc', endColorstr='#009966cc',GradientType=0 ); /* IE6-9 */
+    background: -moz-linear-gradient(top, rgba(153, 102, 204, 1) 0%, rgba(153, 102, 204, 0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(153, 102, 204, 1) 0%, rgba(153, 102, 204, 0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(153, 102, 204, 1) 0%, rgba(153, 102, 204, 0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#9966cc', endColorstr='#009966cc', GradientType=0); /* IE6-9 */
+
+  }
+  .bubbles {
+    width: 30%;
+    position: absolute;
+    bottom: -400px;
+    left: 0;
+  }
+
+  .flippedbubbles {
+    width: 30%;
+    right: 0;
+    bottom: -400px;
+    position: absolute;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
 
 
   }
-
-
-
 }
 
 .box {
   padding: 60px;
   //background: #FFFFFF;
 }
+
+// ABOUT ME WRAP
 
 .about-wrap {
   position: relative;
@@ -111,10 +130,37 @@
       padding: 10px;
     }
   }
+  .clearfix {
+    position: relative;
+  }
   img {
-    width: 15%;
-    margin: 20px;
+    width: 100%;
+
     border: 5px solid $logoCircle;
+    position: absolute;
+    top: 50%;
+    left: 0;
+  }
+  .stripe {
+    top: 4px;
+    left: 10px;
+    //content: '';
+    width: 55px;
+    height: 5px;
+    //opacity: .3;
+    //position: absolute;
+    background-color: $heroColor;
+    margin-bottom: 5px;
+  }
+  .picture-about {
+    position: relative;
+    margin: 0 auto;
+
+  }
+  .text-about {
+    //position: absolute;
+    top: 50%;
+    left: 0;
   }
 }
 
@@ -153,17 +199,17 @@
     }
   }
   .stripe {
-      top: 4px;
-      left: 10px;
-      //content: '';
-      width: 44px;
-      height: 4px;
-      opacity: .3;
-      position: absolute;
-      background-color: $heroColor;
+    top: 4px;
+    left: 10px;
+    //content: '';
+
+    width: 44px;
+    height: 4px;
+    opacity: .3;
+    position: absolute;
+    background-color: $heroColor;
   }
 }
-
 
 .portfolio-wrap {
   position: relative;
@@ -209,6 +255,5 @@
     position: absolute;
     background-color: $heroColor;
   }
-
 
 }

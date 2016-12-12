@@ -24,7 +24,7 @@
 
 body {
   font-family: "Muli", sans-serif;
-  font-size: 17px;
+  font-size: 16px;
   line-height: 1.9;
   color: #2c2c2c;
   letter-spacing: 0.3px;
@@ -56,6 +56,13 @@ h2 {
   font-family: "Muli", sans-serif;
   font-weight: 700; }
 
+h4 {
+  letter-spacing: 2px;
+  color: #393185;
+  text-align: left;
+  margin-bottom: 5px;
+  font-weight: 700; }
+
 .transition, a, .header, .header .row {
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
@@ -65,6 +72,12 @@ h2 {
 
 a {
   text-decoration: none !important; }
+  a:hover {
+    cursor: pointer; }
+
+p {
+  line-height: 1;
+  text-align: justify; }
 
 .header {
   position: fixed;
@@ -151,8 +164,24 @@ a {
     /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom, #9966cc 0%, rgba(153, 102, 204, 0) 100%);
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9966cc', endColorstr='#009966cc',GradientType=0 );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#9966cc', endColorstr='#009966cc', GradientType=0);
     /* IE6-9 */ }
+  .hero-wrap .bubbles {
+    width: 30%;
+    position: absolute;
+    bottom: -400px;
+    left: 0; }
+  .hero-wrap .flippedbubbles {
+    width: 30%;
+    right: 0;
+    bottom: -400px;
+    position: absolute;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH"; }
 
 .box {
   padding: 60px; }
@@ -192,10 +221,27 @@ a {
     .about-wrap .box {
       margin-bottom: 40px;
       padding: 10px; } }
+  .about-wrap .clearfix {
+    position: relative; }
   .about-wrap img {
-    width: 15%;
-    margin: 20px;
-    border: 5px solid #393185; }
+    width: 100%;
+    border: 5px solid #393185;
+    position: absolute;
+    top: 50%;
+    left: 0; }
+  .about-wrap .stripe {
+    top: 4px;
+    left: 10px;
+    width: 55px;
+    height: 5px;
+    background-color: #9966CC;
+    margin-bottom: 5px; }
+  .about-wrap .picture-about {
+    position: relative;
+    margin: 0 auto; }
+  .about-wrap .text-about {
+    top: 50%;
+    left: 0; }
 
 .skills-wrap {
   position: relative;
