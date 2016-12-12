@@ -224,11 +224,7 @@ p {
   .about-wrap .clearfix {
     position: relative; }
   .about-wrap img {
-    width: 100%;
-    border: 5px solid #393185;
-    position: absolute;
-    top: 50%;
-    left: 0; }
+    display: none; }
   .about-wrap .stripe {
     top: 4px;
     left: 10px;
@@ -237,8 +233,13 @@ p {
     background-color: #9966CC;
     margin-bottom: 5px; }
   .about-wrap .picture-about {
-    position: relative;
-    margin: 0 auto; }
+    height: 400px;
+    background: url("../img/Pamela2.jpg") no-repeat center center;
+    background-size: contain; }
+    @media only screen and (max-width: 767px) {
+      .about-wrap .picture-about {
+        margin: 20px;
+        height: 200px; } }
   .about-wrap .text-about {
     top: 50%;
     left: 0; }
