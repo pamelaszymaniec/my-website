@@ -5,6 +5,7 @@ body {
   color: #2c2c2c;
   letter-spacing: 0.3px;
   margin: 0;
+  text-align: justify;
 }
 
 .row {
@@ -76,5 +77,6 @@ p {
   height: 5px;
   background-color: $stripes;
   margin-bottom: 5px;
+  display: block;
 }
 

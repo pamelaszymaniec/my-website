@@ -1,5 +1,5 @@
-var $animation_elements = $('.wow');
-var $window = $(window);
+var $animation_elements = $('.wow'),
+ $window = $(window);
 
 function check_if_in_view() {
     var window_height = $window.height();
