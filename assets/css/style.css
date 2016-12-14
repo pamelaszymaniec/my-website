@@ -293,7 +293,7 @@ footer {
       margin: 0 auto;
       background: #1C4465;
       display: block;
-      border-radius: 30% 0;
+      border-radius: 30% 0 0 0;
       box-shadow: 0 0 55px 5px rgba(25, 68, 101, 0.05); }
       @media only screen and (min-width: 768px) {
         .skills-wrap .tech-icons img {

@@ -24,6 +24,8 @@ var slider = (function () {
                     zIndex: 99
                 },
                 initTextCSS = {
+                    // position: abosolute,
+                    // right: '-150px',
                     top: 0,
                     zIndex: 99,
                     paddingTop: '100px',
@@ -50,7 +52,7 @@ var slider = (function () {
             itemsText.each(function (index, item) {
                 if (index > 0) {
                     $(item).css({
-                        right: '-300%',
+                        right: '-600%',
                         zIndex: 1
 
                     });
