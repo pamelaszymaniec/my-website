@@ -13,9 +13,9 @@ $(document).ready(function () {
     $(window).scroll(function(){
         //only run parallax if on desktop screen
         //(mobile parallax interferes with content consumption)
-        headerAnimate();
-        if ( pageWidth > 800 ) {
 
+        if ( pageWidth > 800 ) {
+            headerAnimate();
             parallax();
         }
     });
@@ -66,6 +66,8 @@ $(document).ready(function () {
     });
 
     $('.menu-trigger a').click(function () {
+        $('#nav-icon2').toggleClass('open');
+
         $('#menu').toggleClass('active');
     });
 

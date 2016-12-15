@@ -64,12 +64,12 @@ h4 {
   margin-bottom: 5px;
   font-weight: 700; }
 
-.transition, a, .header, .header .row {
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -ms-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out; }
+.transition, a, .header, .header .row, .skills-wrap .tech-icons .tech-item:hover b {
+  -webkit-transition: all 0.6s ease-out;
+  -moz-transition: all 0.6s ease-out;
+  -ms-transition: all 0.6s ease-out;
+  -o-transition: all 0.6s ease-out;
+  transition: all 0.6s ease-out; }
 
 a {
   text-decoration: none !important; }
@@ -89,6 +89,15 @@ p {
   margin-bottom: 5px;
   display: block; }
 
+.hambuger {
+  top: 4px;
+  left: 10px;
+  width: 35px;
+  height: 4px;
+  background-color: white;
+  margin-top: 7px;
+  display: block; }
+
 .header {
   position: fixed;
   top: 0;
@@ -100,17 +109,22 @@ p {
   @media only screen and (max-width: 991px) {
     .header {
       position: fixed;
-      background: rgba(255, 255, 255, 0.95);
-      box-shadow: 0 0 66px 4px rgba(152, 123, 123, 0.18); } }
+      background: #1C4465;
+      box-shadow: 0 0 66px 4px rgba(152, 123, 123, 0.18); }
+      .header .logo img {
+        width: 60px; }
+      .header .row {
+        padding-top: 5px;
+        padding-bottom: 5px; } }
   .header.scrolled {
+    position: fixed;
     background: #1C4465;
     box-shadow: 0 0 66px 4px rgba(152, 123, 123, 0.18); }
-    .header.scrolled .row {
-      padding-top: 10px;
-      padding-bottom: 10px; }
     .header.scrolled .logo img {
-      max-width: 200px;
-      position: absolute; }
+      width: 60px; }
+    .header.scrolled .row {
+      padding-top: 5px;
+      padding-bottom: 5px; }
   .header .row {
     padding-top: 60px;
     padding-bottom: 60px; }
@@ -147,19 +161,15 @@ p {
   margin-left: 18px; }
 
 footer {
-  background: #e1bbdf; }
+  background: #D4BFE9; }
 
 .hero-wrap {
   padding-top: 120px;
   position: relative;
   text-align: center;
-  background: url("../img/developer-tree-on-webSVGsmall.svg") no-repeat center 90px;
+  background: url("../img/developer-tree-on-webSVGsmall.svg") no-repeat center 100px;
   background-size: 100vh;
   height: 100vh; }
-  @media only screen and (max-width: 991px) {
-    .hero-wrap {
-      padding-top: 60px;
-      padding-bottom: 60px; } }
   @media only screen and (max-width: 991px) {
     .hero-wrap {
       padding-top: 60px;
@@ -265,8 +275,7 @@ footer {
     -webkit-transform-origin: 0;
     transform-origin: 0;
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e1bbdf+0,688ee6+100 */
-    background: #e1bbdf;
-    /* Old browsers */ }
+    background: #D4BFE9; }
     @media only screen and (max-width: 991px) {
       .skills-wrap:before {
         border-radius: 0;
@@ -279,6 +288,16 @@ footer {
         transform: translateX(-50%); } }
   .skills-wrap .skills-description h2 {
     text-align: left; }
+  .skills-wrap .skills-description ul {
+    padding: 0 0 15px 0;
+    margin: 0; }
+  .skills-wrap .skills-description li {
+    list-style-type: square;
+    color: #1C4465;
+    line-height: 1;
+    margin-left: 30px; }
+    .skills-wrap .skills-description li span {
+      color: black; }
   .skills-wrap .tech-icons {
     color: #1C4465;
     text-align: center; }
@@ -294,7 +313,7 @@ footer {
       background: #1C4465;
       display: block;
       border-radius: 30% 0 0 0;
-      box-shadow: 0 0 55px 5px rgba(25, 68, 101, 0.05); }
+      box-shadow: 0 0 55px 5px rgba(25, 68, 101, 0.1); }
       @media only screen and (min-width: 768px) {
         .skills-wrap .tech-icons img {
           margin: 0 0 0 auto; } }
@@ -304,6 +323,11 @@ footer {
       .skills-wrap .tech-icons .tech-item:hover b {
         display: none; }
       .skills-wrap .tech-icons .tech-item:hover .progress-item {
+        -webkit-transition: all 0.1s ease;
+        -moz-transition: all 0.1s ease;
+        -ms-transition: all 0.1s ease;
+        -o-transition: all 0.1s ease;
+        transition: all 0.1s ease;
         margin: 3px 0.5px;
         display: inline-block;
         width: 5px;
@@ -317,8 +341,7 @@ footer {
   position: relative;
   overflow: hidden;
   padding-bottom: 100px;
-  background: #e1bbdf;
-  /* Old browsers */
+  background: #D4BFE9;
   text-align: center; }
   .portfolio-wrap:before {
     content: " ";
@@ -360,7 +383,7 @@ footer {
     font-family: Montserrat, sans-serif; }
   .portfolio-wrap .portfolio-description {
     right: 0;
-    height: 150px;
+    height: 250px;
     width: 100%; }
     .portfolio-wrap .portfolio-description div {
       position: absolute;

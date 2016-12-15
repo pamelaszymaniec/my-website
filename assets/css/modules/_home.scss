@@ -3,14 +3,10 @@
   //padding-bottom: 120px;
   position: relative;
   text-align: center;
-  background: url("../img/developer-tree-on-webSVGsmall.svg") no-repeat center 90px;
+  background: url("../img/developer-tree-on-webSVGsmall.svg") no-repeat center 100px;
   background-size: 100vh;
   height: 100vh;
 
-  @include device(sm-down) {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
   @include device(sm-down) {
     padding-top: 60px;
     padding-bottom: 60px;
@@ -152,7 +148,8 @@
     transform-origin: 0;
 
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e1bbdf+0,688ee6+100 */
-    background: #e1bbdf; /* Old browsers */
+    //background: #e1bbdf; /* Old browsers */
+    background: $heroColor;
 
     @include device(sm-down) {
       border-radius: 0;
@@ -168,6 +165,20 @@
   .skills-description {
     h2 {
       text-align: left;
+    }
+    ul {
+      //list-style: none; /* Remove list bullets */
+      padding: 0 0 15px 0;
+      margin: 0;
+    }
+    li {
+      list-style-type: square;
+      color: $headers;
+      line-height: 1;
+      margin-left: 30px;
+      span {
+        color: black;
+      }
     }
   }
   .tech-icons {
@@ -189,7 +200,7 @@
       background: $headers;
       display: block;
       border-radius: 30% 0 0 0;
-      box-shadow: 0 0 55px 5px rgba(25, 68, 101, 0.05);
+      box-shadow: 0 0 55px 5px rgba(25, 68, 101, 0.1);
       @include device(sm-up) {
         margin: 0 0 0 auto;
       }
@@ -201,10 +212,15 @@
         opacity: 0.9;
         cursor: pointer;
         b {
+          @extend .transition;
           display: none;
         }
         .progress-item {
-          //float: left;
+          -webkit-transition: all 0.1s ease;
+          -moz-transition: all 0.1s ease;
+          -ms-transition: all 0.1s ease;
+          -o-transition: all 0.1s ease;
+          transition: all 0.1s ease;
           margin: 3px 0.5px;
           display: inline-block;
           width: 5px;
@@ -228,7 +244,8 @@
   position: relative;
   overflow: hidden;
   padding-bottom: 100px;
-  background: #e1bbdf; /* Old browsers */
+  //background: #e1bbdf; /* Old browsers */
+  background: $heroColor;
   //background: -moz-linear-gradient(top, #e1bbdf 0%, #688ee6 100%); /* FF3.6-15 */
   //background: -webkit-linear-gradient(top, #e1bbdf 0%, #688ee6 100%); /* Chrome10-25,Safari5.1-6 */
   //background: linear-gradient(to bottom, #e1bbdf 0%, #688ee6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
@@ -295,7 +312,7 @@
     //padding-bottom: 70px;
     //position: absolute;
     right: 0;
-    height: 150px;
+    height: 250px;
     width: 100%;
     //left: 70px;
     //background: red;

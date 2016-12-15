@@ -9,21 +9,33 @@
   box-shadow: 0 0 66px 4px rgba(152, 123, 123, 0);
   @include device(sm-down) {
     position: fixed;
-    background: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 0 66px 4px rgba(152, 123, 123, 0.18);
-  }
-  &.scrolled {
     background: $headers;
     box-shadow: 0 0 66px 4px rgba(152, 123, 123, 0.18);
-    .row {
-      padding-top: 10px;
-      padding-bottom: 10px;
-    }
+
     .logo img {
-      max-width: 200px;
-      position: absolute;
+      width: 60px;
+      //position: absolute;
+    }
+    .row {
+      padding-top: 5px;
+      padding-bottom: 5px;
     }
   }
+  &.scrolled {
+    position: fixed;
+    background: $headers;
+    box-shadow: 0 0 66px 4px rgba(152, 123, 123, 0.18);
+
+    .logo img {
+      width: 60px;
+      //position: absolute;
+    }
+    .row {
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+  }
+
   .row {
     @extend .transition;
     padding-top: 60px;
