@@ -106,13 +106,19 @@ p {
   z-index: 10;
   background: rgba(255, 255, 255, 0);
   box-shadow: 0 0 66px 4px rgba(152, 123, 123, 0); }
+  .header .letter {
+    text-transform: uppercase;
+    font-size: 18px;
+    color: white;
+    padding: 10px 0px 10px 15px; }
+  @media only screen and (min-width: 992px) {
+    .header #menu {
+      padding-top: 0; } }
   @media only screen and (max-width: 991px) {
     .header {
       position: fixed;
       background: #1C4465;
       box-shadow: 0 0 66px 4px rgba(152, 123, 123, 0.18); }
-      .header .logo img {
-        width: 60px; }
       .header .row {
         padding-top: 5px;
         padding-bottom: 5px; } }
@@ -120,20 +126,18 @@ p {
     position: fixed;
     background: #1C4465;
     box-shadow: 0 0 66px 4px rgba(152, 123, 123, 0.18); }
-    .header.scrolled .logo img {
-      width: 60px; }
     .header.scrolled .row {
       padding-top: 5px;
       padding-bottom: 5px; }
+    .header.scrolled #menu {
+      padding-top: 0; }
   .header .row {
-    padding-top: 60px;
+    padding-top: 30px;
     padding-bottom: 60px; }
     @media only screen and (max-width: 991px) {
       .header .row {
         padding-top: 10px;
         padding-bottom: 10px; }
-        .header .row .logo img {
-          max-width: 200px; }
         .header .row li {
           display: none; }
         .header .row .menu-trigger {
@@ -141,8 +145,6 @@ p {
     @media only screen and (min-width: 992px) {
       .header .row .menu-trigger {
         display: none; } }
-  .header .logo img {
-    max-width: 260px; }
   .header nav {
     text-align: right; }
     .header nav li {
@@ -162,12 +164,21 @@ p {
 
 footer {
   background: #D4BFE9; }
+  footer img {
+    margin: 0 auto;
+    background: #1C4465;
+    display: block;
+    border-radius: 30% 0 0 0;
+    box-shadow: 0 0 55px 5px rgba(25, 68, 101, 0.1); }
+    @media only screen and (min-width: 768px) {
+      footer img {
+        margin: 0 0 0 auto; } }
 
 .hero-wrap {
   padding-top: 120px;
   position: relative;
   text-align: center;
-  background: url("../img/developer-tree-on-webSVGsmall.svg") no-repeat center 100px;
+  background: url("../img/my-tree-passion-web-finalSVG.svg") no-repeat center 100px;
   background-size: 100vh;
   height: 100vh; }
   @media only screen and (max-width: 991px) {
@@ -176,8 +187,8 @@ footer {
       padding-bottom: 60px; } }
   @media only screen and (max-width: 767px) {
     .hero-wrap {
-      background: url("../img/developer-tree-on-webSVGsmall.svg") no-repeat center bottom;
-      background-size: 50vh;
+      background: url("../img/my-tree-passion-web-finalSVG.svg") no-repeat center 120px;
+      background-size: 60vh;
       height: 70vh; } }
   .hero-wrap .gradient {
     display: block;
@@ -450,9 +461,17 @@ footer {
           border-left: 5px solid #1C4465;
           border-top: 5px solid #1C4465;
           box-shadow: 0 0 66px 4px rgba(47, 79, 113, 0.3); }
+          @media only screen and (max-width: 767px) {
+            .portfolio-wrap .slider .slidewrapper .sl-nav a:after {
+              transform: rotate(-135deg);
+              margin: -65px 0 0 -10px; } }
         .portfolio-wrap .slider .slidewrapper .sl-nav a:last-child:after {
           transform: rotate(-135deg);
           margin: 10px 0 0 -10px; }
+          @media only screen and (max-width: 767px) {
+            .portfolio-wrap .slider .slidewrapper .sl-nav a:last-child:after {
+              transform: rotate(45deg);
+              margin: -65px 0 0 -10px; } }
       .portfolio-wrap .slider .slidewrapper .slides > div,
       .portfolio-wrap .slider .slidewrapper .slidewrapper > .sl-nav > a {
         background-color: #fff;

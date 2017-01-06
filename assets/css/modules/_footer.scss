@@ -1,3 +1,15 @@
 footer {
   background: $heroColor;
+  //height: 800px;
+  img {
+    margin: 0 auto;
+    background: $headers;
+    display: block;
+    border-radius: 30% 0 0 0;
+    box-shadow: 0 0 55px 5px rgba(25, 68, 101, 0.1);
+    @include device(sm-up) {
+      margin: 0 0 0 auto;
+    }
+
+  }
 }

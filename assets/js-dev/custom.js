@@ -33,7 +33,7 @@ $(document).ready(function () {
     function parallax(){
         var scrolled = $(window).scrollTop();
         $('.has-parallax').css(
-            'bottom', (scrolled*0.3)+ (-300) + 'px'
+            'bottom', (scrolled*0.6)+ (-300) + 'px'
         );
     }
 
@@ -66,7 +66,6 @@ $(document).ready(function () {
     });
 
     $('.menu-trigger a').click(function () {
-        $('#nav-icon2').toggleClass('open');
 
         $('#menu').toggleClass('active');
     });
