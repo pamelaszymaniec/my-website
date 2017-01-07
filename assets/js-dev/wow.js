@@ -1,26 +1,31 @@
-var $animation_elements = $('.wow'),
+var $animationElements = $('.wow'),
  $window = $(window);
+var pageWidth = $(window).width();
 
-function check_if_in_view() {
-    var window_height = $window.height();
-    var window_top_position = $window.scrollTop();
-    var window_bottom_position = (window_top_position + window_height);
+function checkIfInView() {
+    var windowHeight = $window.height();
+    var windowTopPosition = $window.scrollTop();
+    var windowBottomPosition = (windowTopPosition + windowHeight);
 
-    $.each($animation_elements, function() {
+    $.each($animationElements, function() {
         var $element = $(this);
-        var element_height = $element.outerHeight();
-        var element_top_position = $element.offset().top;
-        var element_bottom_position = (element_top_position + element_height);
-
-        //check to see if this current container is within viewport
-        if ((element_bottom_position >= window_top_position) &&
-            (element_top_position <= window_bottom_position)) {
+        var elementHeight = $element.outerHeight();
+        var elementTopPosition = $element.offset().top - 50;
+        var elementBottomPosition = (elementTopPosition + elementHeight);
+        if ( pageWidth > 800) {
+            //check to see if this current container is within viewport
+            if ((elementBottomPosition >= windowTopPosition) &&
+                (elementTopPosition <= windowBottomPosition)) {
+                $element.addClass('in-view');
+            } else {
+                $element.removeClass('in-view');
+            }
+        }
+        else {
             $element.addClass('in-view');
-        } else {
-            $element.removeClass('in-view');
         }
     });
 }
 
-$window.on('scroll resize', check_if_in_view);
+$window.on('scroll resize', checkIfInView);
 $window.trigger('scroll');

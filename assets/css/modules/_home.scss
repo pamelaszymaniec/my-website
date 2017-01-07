@@ -1,24 +1,19 @@
 .hero-wrap {
   padding-top: 120px;
-  //padding-bottom: 120px;
   position: relative;
   text-align: center;
-  background: url("../img/my-tree-passion-web-finalSVG.svg") no-repeat center 100px;
+  background: url("../img/my-passion-tree-bg.svg") no-repeat center 100px;
   background-size: 100vh;
   height: 100vh;
-
-
   @include device(sm-down) {
     padding-top: 60px;
     padding-bottom: 60px;
   }
-
   @include device(xs) {
-    background: url("../img/my-tree-passion-web-finalSVG.svg") no-repeat center 120px;
-    background-size:60vh;
+    background: url("../img/my-passion-tree-bg.svg") no-repeat center 120px;
+    background-size: 60vh;
     height: 70vh;
   }
-
   .gradient {
     display: block;
     width: 100%;
@@ -28,14 +23,12 @@
     right: 0;
     -webkit-transform-origin: 100%;
     transform-origin: 100%;
-    //background: $heroColor;
     z-index: -1;
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e1bbdf+0,9966cc+0&1+0,0+100 */
     background: -moz-linear-gradient(top, rgba(153, 102, 204, 1) 0%, rgba(153, 102, 204, 0) 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(top, rgba(153, 102, 204, 1) 0%, rgba(153, 102, 204, 0) 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom, rgba(153, 102, 204, 1) 0%, rgba(153, 102, 204, 0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#9966cc', endColorstr='#009966cc', GradientType=0); /* IE6-9 */
-
   }
   .bubbles {
     width: 50%;
@@ -44,7 +37,6 @@
     overflow: hidden;
     left: 0;
   }
-
   .flippedbubbles {
     width: 50%;
     right: 0;
@@ -55,9 +47,8 @@
     -o-transform: scaleX(-1);
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
-    filter: FlipH;
+    filter: "FlipH";
     -ms-filter: "FlipH";
-
   }
 }
 
@@ -66,7 +57,6 @@
 .about-wrap {
   position: relative;
   overflow: hidden;
-
   &:before {
     content: " ";
     position: absolute;
@@ -79,48 +69,29 @@
     -ms-transform: translateX(-50%);
     -o-transform: translateX(-50%);
     transform: translateX(-50%);
-
-    //-webkit-transform: translateY(-50%);
-    //-moz-transform: translateY(-50%);
-    //-ms-transform: translateY(-50%);
-    //-o-transform: translateY(-50%);
-    //transform: translateY(-50%);
     border-radius: 100%;
     display: block;
-
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e1bbdf+0,688ee6+100 */
-    background: #FFFFFF; /* Old browsers */
-    //background: -moz-linear-gradient(top, #e1bbdf 0%, #688ee6 100%); /* FF3.6-15 */
-    //background: -webkit-linear-gradient(top, #e1bbdf 0%, #688ee6 100%); /* Chrome10-25,Safari5.1-6 */
-    //background: linear-gradient(to bottom, #e1bbdf 0%, #688ee6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    //filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e1bbdf', endColorstr='#688ee6', GradientType=0); /* IE6-9 */
-
+    background: #FFFFFF;
     @include device(sm-down) {
       border-radius: 0;
       height: 100%;
       width: 100%;
       padding: 5px;
-
     }
-
   }
-
   .picture-about {
     height: 400px;
     border: 30px solid white;
     border-radius: 50% 0 0 0;
-    background: url("../img/Pamela2.jpg") no-repeat center center;
+    background: url("../img/picture-of-me.jpg") no-repeat center center;
     background-size: contain;
-
     @include device(xs) {
       margin-bottom: 20px;
       height: 200px;
       border: 10px;
 
     }
-
   }
-
 }
 
 .skills-wrap {
@@ -133,25 +104,16 @@
     left: 50%;
     width: 100vw;
     height: 100vw;
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
+    -webkit-transform: translateX(-103%);
+    -moz-transform: translateX(-103%);
+    -ms-transform: translateX(-103%);
+    -o-transform: translateX(-103%);
     transform: translateX(-103%);
     border-radius: 15%;
     display: block;
-    //-webkit-transform: skewY(-15deg);
-    //-moz-transform: skewY(-15deg);
-    //-ms-transform: skewY(-15deg);
-    //-o-transform: skewY(-15deg);
-    //transform: skewY(-15deg);
     -webkit-transform-origin: 0;
     transform-origin: 0;
-
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e1bbdf+0,688ee6+100 */
-    //background: #e1bbdf; /* Old browsers */
     background: $heroColor;
-
     @include device(sm-down) {
       border-radius: 0;
       height: 100%;
@@ -168,7 +130,6 @@
       text-align: left;
     }
     ul {
-      //list-style: none; /* Remove list bullets */
       padding: 0 0 15px 0;
       margin: 0;
     }
@@ -193,9 +154,7 @@
     }
     div {
       padding: 10px;
-
     }
-
     img {
       margin: 0 auto;
       background: $headers;
@@ -205,10 +164,8 @@
       @include device(sm-up) {
         margin: 0 0 0 auto;
       }
-
     }
     .tech-item {
-
       &:hover {
         opacity: 0.9;
         cursor: pointer;
@@ -228,16 +185,12 @@
           height: 5px;
           border: 1px solid $headers;
           border-radius: 20% 0;
-
         }
         .fullfilled {
           background: $headers;
         }
-
       }
-
     }
-
   }
 }
 
@@ -245,14 +198,8 @@
   position: relative;
   overflow: hidden;
   padding-bottom: 100px;
-  //background: #e1bbdf; /* Old browsers */
   background: $heroColor;
-  //background: -moz-linear-gradient(top, #e1bbdf 0%, #688ee6 100%); /* FF3.6-15 */
-  //background: -webkit-linear-gradient(top, #e1bbdf 0%, #688ee6 100%); /* Chrome10-25,Safari5.1-6 */
-  //background: linear-gradient(to bottom, #e1bbdf 0%, #688ee6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  //filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e1bbdf', endColorstr='#688ee6', GradientType=0); /* IE6-9 */
   text-align: center;
-
   &:before {
     content: " ";
     position: absolute;
@@ -260,24 +207,16 @@
     left: 50%;
     width: 100vw;
     height: 100vw;
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
+    -webkit-transform: translateX(-3%);
+    -moz-transform: translateX(-3%);
+    -ms-transform: translateX(-3%);
+    -o-transform: translateX(-3%);
     transform: translateX(-3%);
     border-radius: 0 15%;
     display: block;
-    //-webkit-transform: skewY(-15deg);
-    //-moz-transform: skewY(-15deg);
-    //-ms-transform: skewY(-15deg);
-    //-o-transform: skewY(-15deg);
-    //transform: skewY(-15deg);
     -webkit-transform-origin: 0;
     transform-origin: 0;
-
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e1bbdf+0,688ee6+100 */
     background: white;
-
     @include device(sm-down) {
       border-radius: 0;
       height: 100%;
@@ -300,34 +239,20 @@
   $nav-width: 75px;
   $nav-height: 75px;
 
-
   .portfolio-description {
-    //padding-left: 70px;
-    //padding-bottom: 70px;
-    //position: absolute;
     right: 0;
     height: 250px;
     width: 100%;
-    //left: 70px;
-    //background: red;
     div {
       position: absolute;
       height: 100%;
-      //background: sandybrown;
-      //width: calc(100% - #{$nav-width});
-      //background-position: center top;
-      //background-repeat: no-repeat;
-      //background-size: cover;
     }
-
   }
   .slider {
     width: 100%;
     height: 100%;
     max-width: 700px;
     margin: 0 auto;
-    //border: 5px solid $headers;
-    //border-radius: 30% 0;
     .slidewrapper {
       position: relative;
       display: block;
@@ -335,12 +260,9 @@
       overflow: hidden;
       height: 300px;
       border-radius: 0;
-      //border: 5px solid $headers;
       @include device(sm-up) {
-
         border-radius: 30% 0 0 0;
       }
-
       .slides {
         position: absolute;
         top: 0;
@@ -355,11 +277,9 @@
           background-size: cover;
         }
       }
-
       .move {
         transition: all .3s ease-out;
       }
-
       .sl-nav {
         position: absolute;
         width: $nav-width;
@@ -367,7 +287,6 @@
         bottom: 0;
         right: 0;
         z-index: 1000;
-
         a {
           width: 100%;
           height: 50%;
@@ -379,13 +298,11 @@
           background-size: auto 100%;
           background-color: #fff;
           opacity: .8;
-
           &:hover {
             opacity: 1;
             transition: all .2s ease-in;
           }
         }
-
         a:after {
           content: '';
           position: absolute;
@@ -402,7 +319,6 @@
             transform: rotate(-135deg);
             margin: -65px 0 0 -10px;
           }
-
         }
 
         a:last-child:after {
@@ -414,7 +330,6 @@
           }
         }
       }
-
       .slides > div,
       .slidewrapper > .sl-nav > a {
         background-color: #fff;
@@ -435,7 +350,6 @@
             width: 100%;
           }
         }
-
         .sl-nav {
           width: 100%;
           height: $nav-height;

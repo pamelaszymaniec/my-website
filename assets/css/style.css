@@ -172,7 +172,7 @@ footer {
     border-radius: 30% 0 0 0;
     box-shadow: 0 0 55px 5px rgba(25, 68, 101, 0.1); }
   footer .contact-icons {
-    padding: 40px 0;
+    padding: 30px 0;
     text-align: center; }
   footer .contact-item {
     margin: 40px auto; }
@@ -196,7 +196,7 @@ footer {
   padding-top: 120px;
   position: relative;
   text-align: center;
-  background: url("../img/my-tree-passion-web-finalSVG.svg") no-repeat center 100px;
+  background: url("../img/my-passion-tree-bg.svg") no-repeat center 100px;
   background-size: 100vh;
   height: 100vh; }
   @media only screen and (max-width: 991px) {
@@ -205,7 +205,7 @@ footer {
       padding-bottom: 60px; } }
   @media only screen and (max-width: 767px) {
     .hero-wrap {
-      background: url("../img/my-tree-passion-web-finalSVG.svg") no-repeat center 120px;
+      background: url("../img/my-passion-tree-bg.svg") no-repeat center 120px;
       background-size: 60vh;
       height: 70vh; } }
   .hero-wrap .gradient {
@@ -243,7 +243,7 @@ footer {
     -o-transform: scaleX(-1);
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
-    filter: FlipH;
+    filter: "FlipH";
     -ms-filter: "FlipH"; }
 
 .about-wrap {
@@ -263,9 +263,7 @@ footer {
     transform: translateX(-50%);
     border-radius: 100%;
     display: block;
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e1bbdf+0,688ee6+100 */
-    background: #FFFFFF;
-    /* Old browsers */ }
+    background: #FFFFFF; }
     @media only screen and (max-width: 991px) {
       .about-wrap:before {
         border-radius: 0;
@@ -276,7 +274,7 @@ footer {
     height: 400px;
     border: 30px solid white;
     border-radius: 50% 0 0 0;
-    background: url("../img/Pamela2.jpg") no-repeat center center;
+    background: url("../img/picture-of-me.jpg") no-repeat center center;
     background-size: contain; }
     @media only screen and (max-width: 767px) {
       .about-wrap .picture-about {
@@ -294,16 +292,15 @@ footer {
     left: 50%;
     width: 100vw;
     height: 100vw;
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
+    -webkit-transform: translateX(-103%);
+    -moz-transform: translateX(-103%);
+    -ms-transform: translateX(-103%);
+    -o-transform: translateX(-103%);
     transform: translateX(-103%);
     border-radius: 15%;
     display: block;
     -webkit-transform-origin: 0;
     transform-origin: 0;
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e1bbdf+0,688ee6+100 */
     background: #D4BFE9; }
     @media only screen and (max-width: 991px) {
       .skills-wrap:before {
@@ -379,16 +376,15 @@ footer {
     left: 50%;
     width: 100vw;
     height: 100vw;
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
+    -webkit-transform: translateX(-3%);
+    -moz-transform: translateX(-3%);
+    -ms-transform: translateX(-3%);
+    -o-transform: translateX(-3%);
     transform: translateX(-3%);
     border-radius: 0 15%;
     display: block;
     -webkit-transform-origin: 0;
     transform-origin: 0;
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e1bbdf+0,688ee6+100 */
     background: white; }
     @media only screen and (max-width: 991px) {
       .portfolio-wrap:before {

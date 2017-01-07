@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+    console.log("%c%s", "font-size: 20px;", "What's up? ❤❤❤️");
     var header = $('header');
     var pageWidth = $(window).width();
 
@@ -11,9 +11,6 @@ $(document).ready(function () {
 
     //functions to run on scroll
     $(window).scroll(function(){
-        //only run parallax if on desktop screen
-        //(mobile parallax interferes with content consumption)
-
         if ( pageWidth > 800 ) {
             headerAnimate();
             parallax();
@@ -33,7 +30,7 @@ $(document).ready(function () {
     function parallax(){
         var scrolled = $(window).scrollTop();
         $('.has-parallax').css(
-            'bottom', (scrolled*0.6)+ (-300) + 'px'
+            'bottom', (scrolled*0.6)+ (-400) + 'px'
         );
     }
 
