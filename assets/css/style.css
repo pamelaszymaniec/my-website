@@ -64,7 +64,7 @@ h4 {
   margin-bottom: 5px;
   font-weight: 700; }
 
-.transition, a, .header, .header .row, .skills-wrap .tech-icons .tech-item:hover b {
+.transition, a, .header, .header .row, footer .contact-item:hover b, .skills-wrap .tech-icons .tech-item:hover b {
   -webkit-transition: all 0.6s ease-out;
   -moz-transition: all 0.6s ease-out;
   -ms-transition: all 0.6s ease-out;
@@ -156,23 +156,41 @@ p {
       font-family: "Muli", sans-serif;
       letter-spacing: 1px;
       display: block;
-      padding: 10px 0px 10px 20px; }
+      padding: 10px 15px 10px 10px; }
 
 #menu.active li {
   display: block;
   margin-left: 18px; }
 
 footer {
-  background: #D4BFE9; }
+  background: #D4BFE9;
+  text-align: center; }
   footer img {
     margin: 0 auto;
     background: #1C4465;
     display: block;
     border-radius: 30% 0 0 0;
     box-shadow: 0 0 55px 5px rgba(25, 68, 101, 0.1); }
-    @media only screen and (min-width: 768px) {
-      footer img {
-        margin: 0 0 0 auto; } }
+  footer .contact-icons {
+    padding: 40px 0;
+    text-align: center; }
+  footer .contact-item {
+    margin: 40px auto; }
+    footer .contact-item:hover {
+      opacity: 0.9;
+      cursor: pointer; }
+      footer .contact-item:hover b {
+        display: none; }
+  footer h4, footer .stripe-footer, footer p {
+    text-align: center; }
+  footer .stripe-footer {
+    width: 55px;
+    height: 5px;
+    background-color: #54A6C3;
+    margin: 10px auto;
+    display: block; }
+  footer .row {
+    padding-bottom: 5px; }
 
 .hero-wrap {
   padding-top: 120px;
@@ -318,7 +336,7 @@ footer {
         .skills-wrap .tech-icons h2 {
           text-align: right; } }
     .skills-wrap .tech-icons div {
-      padding: 5px; }
+      padding: 10px; }
     .skills-wrap .tech-icons img {
       margin: 0 auto;
       background: #1C4465;
@@ -387,11 +405,6 @@ footer {
     @media only screen and (min-width: 768px) {
       .portfolio-wrap .portfolio-box {
         margin-right: 60px; } }
-  .portfolio-wrap body {
-    background: #eee; }
-  .portfolio-wrap h2 {
-    text-align: center;
-    font-family: Montserrat, sans-serif; }
   .portfolio-wrap .portfolio-description {
     right: 0;
     height: 250px;

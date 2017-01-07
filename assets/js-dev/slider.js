@@ -29,7 +29,7 @@ var slider = (function () {
                     top: 0,
                     zIndex: 99,
                     paddingTop: '100px',
-                    paddingRight: '15px'
+                    paddingRight: '0px'
                     // paddingLeft: '50px'
                 };
 
@@ -137,7 +137,7 @@ var slider = (function () {
                 // move new text to main view
                 newItemText.addClass('move').css({
                     paddingLeft: '15px',
-                    paddingRight: '15px',
+                    paddingRight: '0',
                     paddingTop: '100px',
                     top: 0,
                     right: 0,

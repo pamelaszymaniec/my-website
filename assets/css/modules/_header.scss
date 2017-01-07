@@ -8,11 +8,6 @@
   background: rgba(255, 255, 255, 0);
   box-shadow: 0 0 66px 4px rgba(152, 123, 123, 0);
   .letter {
-    //position: absolute;
-    //padding-top: 23px;
-    //top: 50%;
-    //left: 50%;
-    //transform: translate(-50%, -50%);
     text-transform: uppercase;
     font-size: 18px;
     color: white;
@@ -99,7 +94,7 @@
       font-family: $header;
       letter-spacing: 1px;
       display: block;
-      padding: 10px 0px 10px 20px;
+      padding: 10px 15px 10px 10px;
     }
   }
 }

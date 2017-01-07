@@ -1,15 +1,41 @@
 footer {
   background: $heroColor;
-  //height: 800px;
+  text-align: center;
   img {
     margin: 0 auto;
     background: $headers;
     display: block;
     border-radius: 30% 0 0 0;
     box-shadow: 0 0 55px 5px rgba(25, 68, 101, 0.1);
-    @include device(sm-up) {
-      margin: 0 0 0 auto;
+  }
+  .contact-icons {
+    padding: 40px 0;
+    //margin: 40px auto;
+    text-align: center;
+  }
+  .contact-item {
+    margin: 40px auto;
+    &:hover {
+      opacity: 0.9;
+      cursor: pointer;
+      b {
+        @extend .transition;
+        display: none;
+      }
     }
+  }
+  h4, .stripe-footer, p {
+    text-align: center;
+  }
 
+  .stripe-footer {
+    width: 55px;
+    height: 5px;
+    background-color: $stripes;
+    margin: 10px auto;
+    display: block;
+  }
+  .row {
+    padding-bottom: 5px;
   }
 }
