@@ -1,6 +1,7 @@
 /**
  * Created by Pamela on 2016-12-13.
  */
+
 var slider = (function () {
     //initialise variables
     var slides = $('.slides'),
@@ -16,28 +17,19 @@ var slider = (function () {
 
         init = function () {
             var currentItem = items.eq(current),
-                currentItemText = itemsText.eq(current),
 
                 //set slide position
                 initCSS = {
                     top: 0,
                     zIndex: 99
-                },
-                initTextCSS = {
-                    // position: abosolute,
-                    // right: '-150px',
-                    top: 0,
-                    zIndex: 99,
-                    paddingTop: '100px',
-                    paddingRight: '0px'
-                    // paddingLeft: '50px'
                 };
 
+
             //display slide in view
-                   currentItem.css(initCSS);
-            currentItemText.css(initTextCSS);
+            currentItem.css(initCSS);
             initEvents();
             updateNavImg();
+            updateText();
 
             //move slides out of view except current slide
             items.each(function (index, item) {
@@ -49,15 +41,6 @@ var slider = (function () {
                 }
             });
 
-            itemsText.each(function (index, item) {
-                if (index > 0) {
-                    $(item).css({
-                        right: '-600%',
-                        zIndex: 1
-
-                    });
-                }
-            });
         },
         //click events
         initEvents = function () {
@@ -65,6 +48,7 @@ var slider = (function () {
                 e.preventDefault();
                 slide('prev');
                 updateNavImg();
+                updateText();
 
             });
 
@@ -72,6 +56,7 @@ var slider = (function () {
                 e.preventDefault();
                 slide('next');
                 updateNavImg();
+                updateText();
 
             });
         },
@@ -86,6 +71,22 @@ var slider = (function () {
 
 
         },
+        updateText = function () {
+            if (current === 0) {
+                itemsText.eq(current).css('display', 'block');
+                itemsText.eq(1).css('display', 'none');
+                itemsText.eq(2).css('display', 'none');
+            } else if (current === 1) {
+                itemsText.eq(current).css('display', 'block');
+                itemsText.eq(0).css('display', 'none');
+                itemsText.eq(2).css('display', 'none');
+            } else if (current === 2) {
+                itemsText.eq(current).css('display', 'block');
+                itemsText.eq(0).css('display', 'none');
+                itemsText.eq(1).css('display', 'none');
+            }
+
+        },
 
 
         //animating slides
@@ -95,24 +96,29 @@ var slider = (function () {
                 currentItemText = itemsText.eq(current);
             //if direction is forward
             if (dir === 'next') {
+                console.log(current + 'forward');
                 //if next slide is not the last, move to next slide
                 //when last slide reached, go back to first slide
                 ( current < length - 1 ) ? ++current : current = 0;
             }
             //if direction is backward
             else if (dir === 'prev') {
+                console.log(current + 'backward');
                 //if slide is not the first, move back to previous slide
                 //is first slide reached, move to last slide
                 ( current > 0 ) ? --current : current = length - 1;
             }
 
-            var newItem = items.eq(current),
-                newItemText = itemsText.eq(current);
+            var newItem = items.eq(current);
             newItem.css({
                 //when ascending order, move slide down, otherwise move slide up
                 top: ( dir === 'next' ) ? '-100%' : '100%',
                 zIndex: 99
             });
+            // newItemText.css({
+            //     //when ascending order, move slide down, otherwise move slide up
+            //     display: 'block'
+            // });
 
             var setTimeout = function () {
                 currentItem.addClass('move').css({
@@ -125,25 +131,9 @@ var slider = (function () {
 
 
                 //text disappear
-                currentItemText.addClass('move').animate({
-                    top: 0,
-                    zIndex: -66,
-                    color: 'white',
-                    // right: ( dir === 'next' ) ? '-100%' : '-100%',
-                    opacity: ( dir === 'next' ) ? '0' : '0'
 
-                });
 
                 // move new text to main view
-                newItemText.addClass('move').css({
-                    paddingLeft: '15px',
-                    paddingRight: '0',
-                    paddingTop: '100px',
-                    top: 0,
-                    right: 0,
-                    opacity: 1
-
-                });
 
 
             };

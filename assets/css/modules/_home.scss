@@ -240,12 +240,11 @@
   $nav-height: 75px;
 
   .portfolio-description {
-    right: 0;
-    height: 250px;
-    width: 100%;
+    //right: 0;
+    //height: 250px;
+    //width: 100%;
     div {
-      position: absolute;
-      height: 100%;
+      display: none;
     }
   }
   .slider {
